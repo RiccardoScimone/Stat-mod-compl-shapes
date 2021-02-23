@@ -7,7 +7,7 @@ require(doParallel)
 require(svMisc)
 require(matlabr)
 
-choose_Scenario = 3 ### 1, 2 ,3 , the choice must be coherent with run_from_r.m TO BE SET
+choose_Scenario = 2 ### 1, 2 ,3 , the choice must be coherent with run_from_r.m TO BE SET
 #### To handle quietly CloudCompare in command line mode
 quiet <- function(x) { 
   sink(tempfile()) 
@@ -36,7 +36,7 @@ Ndef1 = 5
 Ntot = Ncontrol + Ndef1
 for (i in 1:Ncontrol)
 {
-  namevec1 = c(namevec1,paste0("../MatlabScriptEgg2D/PointClouds/In_control",i,".csv"));
+  namevec1 = c(namevec1,paste0("../MatlabScriptEgg2D/PointClouds/In_control_",i,".csv"));
   namevec2 = c(namevec2,paste0("../CCsupport/forw",i,".csv"));
   namevec3 = c(namevec3,paste0("../CCsupport/back",i,".csv"));
 }
